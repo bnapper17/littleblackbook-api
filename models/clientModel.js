@@ -17,11 +17,14 @@ const clientSchema = new Schema({
     address: {
         type: String
     },
+    geolocation: {
+        type: object
+    },
     description: {
         type: String
     },
     bid: {
-        type: Number,
+        type: Number
     },
     emergency: {
         type: Boolean
