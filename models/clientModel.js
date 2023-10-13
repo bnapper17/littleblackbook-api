@@ -18,7 +18,7 @@ const clientSchema = new Schema({
         type: String
     },
     geolocation: {
-        type: object
+        type: Object
     },
     description: {
         type: String
