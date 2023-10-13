@@ -28,12 +28,12 @@ const getClientDetails = async (req, res) => {
 
 // Add a new client
 const addClient = async (req, res) => {
-    const { name, contact, address, description, bid, emergency, contract, archived } = req.body;
+    const { name, contact, address, description, bid, emergency, contract, archived, geolocation } = req.body;
 
     // add client to database
     try{
         const user_id = req.user._id;
-        const client = await Client.create({ name, contact, address, description, bid, emergency, contract, user_id, archived });
+        const client = await Client.create({ name, contact, address, description, bid, emergency, contract, user_id, archived, geolocation });
         res.status(200).json(client);
     }
     catch(err) {
